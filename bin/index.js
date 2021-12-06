@@ -1,8 +1,8 @@
 #! /usr/bin/env node
 
 import readLine from "readline";
-import env_setup from "./env_setup.js";
-import router from "./router.js";
+import env_setup from "../env_setup.js";
+import router from "../router.js";
 import child_process from "child_process";
 
 (async () => {
