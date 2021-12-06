@@ -30,6 +30,8 @@ import child_process from "child_process";
         output: process.stdout
     });
 
+    fs.mkdir('../DOWNLOADED_FILES/', () => {});
+    
     console.log('\nTo proceed with all the questions below, enter any character and press enter.');
     readConsole.question('\nReady to open chrome? ', async () => { 
         env_obj = await env_setup();

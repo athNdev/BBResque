@@ -9,6 +9,7 @@ const __dirname = path.dirname(__filename);
 export default async function downloadFile(url, path_to_file) {    
     const res = await fetch(url);
     const fileStream = fs.createWriteStream(path_to_file);
+    fs.mkdir('./DOWNLOADED_FILES/', () => {});
     await new Promise((resolve, reject) => {
         res.body.pipe(fileStream);
         res.body.on("error", reject);
