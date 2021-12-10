@@ -1,6 +1,6 @@
 {
   "name": "bbresque",
-  "version": "1.0.0",
+  "version": "1.0.8",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -16,7 +16,11 @@
   },
   "keywords": [
     "blackboard",
-    "UON"
+    "UON",
+    "University of Newcastle",
+    "Newcastle",
+    "canvas",
+    "download files form blackboard"
   ],
   "author": "Atharv Naphade",
   "license": "MIT",
@@ -26,12 +30,13 @@
   },
   "homepage": "https://github.com/ClumsyClover/BBResque#readme",
   "dependencies": {
+    "bindings": "^1.5.0",
     "cheerio": "^1.0.0-rc.10",
     "chrome-launcher": "^0.15.0",
     "fetch": "^1.1.0",
+    "nan": "^2.15.0",
     "node-fetch": "^3.1.0",
-    "open-file-explorer": "^1.0.2",
-    "puppeteer": "^12.0.1",
-    "puppeteer-core": "^12.0.1"
+    "puppeteer-core": "^12.0.1",
+    "requirejs": "2.3.6"
   }
 }
