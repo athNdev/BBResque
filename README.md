@@ -15,7 +15,7 @@
 ### BBResque does all this for you in just a few clicks. Follow the steps below to see how.
 
 ## **Steps to install -**
-#### 1) Download and install the latest LTS version of NodeJS (if you don't already have it), for your respective OS from here - https://nodejs.org/en/download/
+#### 1) Download and install the latest LTS version of NodeJS (if you don't already have it), for your respective OS from here - https://nodejs.org/en/download/ (download v14(or higher) of nodejs)
 #### 2) Open CMD(Windows) or Terminal(MacOS/Linux).
 #### 3) Type the command - **npm i bbresque**, this will install BBResque on your PC.
 #### 4) After the installation finishes, type **bbresque** into the Terminal/CMD window, this will run BBResque, now every time you want to run BBResque; just open up CMD/Terminal and type in **bbresque**.

@@ -31,6 +31,12 @@ const downloads_path = `${os.homedir()}/Downloads`;
     
     console.log("\nAnd thanks for using my program, it means a lot. :)")
 
+    //////////////////////////////////
+
+    // fs.mkdir('./progress.json', () => {});
+    fs.writeFile('./progress.json', '{ "queued": 0, "downloaded": 0 }', {}, (err) => { if(err) { console.log(err); } })
+    //////////////////////////////////
+
     var env_obj;
 
     const readConsole = readLine.createInterface({
