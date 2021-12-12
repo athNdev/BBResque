@@ -31,14 +31,14 @@ async function crawl_folders($, browser, address){
     
             if(address){ // If some address was passed in the args.
                 new_address = address + `${folder_name}/`;
-                fs.mkdir(`${new_address}/`, () => {});
+                // fs.mkdir(`${new_address}/`, () => {});
             }
             else{
                 new_address = `${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/` + `${folder_name}/`;
 
-                fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/`, { recursive: true }, (err) => { }); // Create course folder
-                fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/`, { recursive: true }, (err) => { }); // Create page folder
-                fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/` + `${folder_name}/`, { recursive: true }, (err) => { }); // Create sub-folder
+                // fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/`, { recursive: true }, (err) => { }); // Create course folder
+                // fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/`, { recursive: true }, (err) => { }); // Create page folder
+                // fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/` + `${folder_name}/`, { recursive: true }, (err) => { }); // Create sub-folder
             }
 
             browser.newPage().then((async (child_page) => {

@@ -1,17 +1,21 @@
 import fetch from 'node-fetch';
 import fs from 'fs';
 
-export default async function downloadFile(url, path_to_file) {    
+import shelljs from 'shelljs';
+
+export default async function downloadFile(url, path_to_file, dir_path) {
+
+    shelljs.mkdir('-p', dir_path); // Create the dir where the file to be downloaded is to be stored.
+
     const res = await fetch(url);
     const fileStream = fs.createWriteStream(path_to_file);
-
-    //// THE QUEUED COUNTER INCREMENTATION IS INTERCHANGES WITH THE INCREMENTATION OF THE DOWNLOADED!!!!!!!!!!!!!!!!!!! 
 
     await new Promise(async (resolve, reject) => {
         // await increment_progress_val('queued');
 
-
         res.body.pipe(fileStream);
+
+        console.log(`\n${path_to_file}\nFILE DOWNLOAD STARTED`);
 
         res.body.on("error", reject);
         fileStream.on("finish", resolve);
@@ -25,8 +29,8 @@ export default async function downloadFile(url, path_to_file) {
 
             // await increment_progress_val('downloaded');
 
-            console.log(`\n${path_to_file}`);
-            console.log('FILE DOWNLOADED');
+            console.log(`\n${path_to_file}\nFILE DOWNLOADED`);
+
             // const progress = await get_progress_json();
             // console.log(`${progress.downloaded} of ${progress.queued} files downloaded. (only close this program, when these values don't change for a long time)`);
 

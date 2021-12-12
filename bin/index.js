@@ -9,6 +9,7 @@ import fs from "fs";
 import os from 'os';
 const downloads_path = `${os.homedir()}/Downloads`;
 
+
 (async () => {
     console.log('======================== BBResque =========================');
     console.log('Developed by Atharv Naphade (ClumsyClover), Software Engineering undergrad student at UON');
@@ -31,11 +32,8 @@ const downloads_path = `${os.homedir()}/Downloads`;
     
     console.log("\nAnd thanks for using my program, it means a lot. :)")
 
-    //////////////////////////////////
-
     // fs.mkdir('./progress.json', () => {});
-    // fs.writeFile('./progress.json', '{ "queued": 0, "downloaded": 0 }', {}, (err) => { if(err) { console.log(err); } })
-    //////////////////////////////////
+    // fs.writeFile('./progress.json', '{ "queued": 0, "downloaded": 0 }', {}, (err) => { if(err) { console.log(err); } });
 
     var env_obj;
 
@@ -45,6 +43,7 @@ const downloads_path = `${os.homedir()}/Downloads`;
     });
 
     fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/`, { recursive: true }, (err) => { });
+    
     
     console.log('\nTo proceed with all the questions below, enter any character and press enter.');
     readConsole.question('\nReady to open chrome? ', async () => { 
