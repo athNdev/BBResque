@@ -6,8 +6,13 @@ import os from 'os';
 const downloads_path = `${os.homedir()}/Downloads`;
 
 export default async function crawl_folder_pages($, browser, address){
-    const attachments_page = $('.attachments li a').length != 0;
+    // const attachments_page = ($('.attachments li a').length != 0) || ($('.liItem h3').text().includes('If this item does not open automatically you can'));
+    
+    const attachments_page = ($('.attachments li a').length != 0);
     const folder_page = $('h3 a').not('.submenuLink').not('.comboLink').length != 0;
+
+    console.log("ATTACHMENTS PAGE BOOL "+attachments_page+" "+$('.liItem h3').text());
+    console.log("FOLDER PAGE BOOL "+folder_page+"\n");
 
     // Check is the page is a attachmnets page
     if(attachments_page){ crawl_attachments($, browser, address); }

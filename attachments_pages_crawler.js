@@ -53,5 +53,37 @@ export default function crawl_attachments($, browser, address) {
                 }, 5000*(j+1));
             };
         });
+
+        // Special download pages, "If this item does not open automatically you can"
+        // if($('h3', liitem_elem).text().includes('If this item does not open automatically you can')){
+        //     console.log("HERE!!!!!!!");
+
+        //     $('h3 a', liitem_elem).each(async (j, elem) => {
+        //         new setTimeout(() => {
+
+        //             browser.newPage().then(async (page) => {
+
+        //                 page.on('request', async (req) => {
+        //                     if(req.url().includes('content.blackboardcdn.com')){
+        //                         page.close();
+
+        //                         try {
+        //                             const dir_path = `${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/${$('#pageTitleText span').text()}/`;
+        //                             const file_path = `${dir_path}/${$('#pageTitleText span').text()}`;
+
+        //                             if(!fs.existsSync(file_path)) {
+        //                                 downloadFile(req.url(), file_path, dir_path);
+        //                             }
+        //                         } catch(err) {
+        //                             console.log(err)
+        //                         };
+        //                     }
+        //                 });
+
+        //                 await page.goto(`https://uonline.newcastle.edu.au${$(elem).attr('href')}`).then(() => {}, () => {});
+        //             });
+        //         }, 5000*(j+1));
+        //     });
+        // }
     });
 }
