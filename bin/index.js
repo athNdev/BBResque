@@ -34,7 +34,7 @@ const downloads_path = `${os.homedir()}/Downloads`;
     //////////////////////////////////
 
     // fs.mkdir('./progress.json', () => {});
-    fs.writeFile('./progress.json', '{ "queued": 0, "downloaded": 0 }', {}, (err) => { if(err) { console.log(err); } })
+    // fs.writeFile('./progress.json', '{ "queued": 0, "downloaded": 0 }', {}, (err) => { if(err) { console.log(err); } })
     //////////////////////////////////
 
     var env_obj;
