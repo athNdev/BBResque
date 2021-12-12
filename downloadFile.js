@@ -8,7 +8,7 @@ export default async function downloadFile(url, path_to_file) {
     //// THE QUEUED COUNTER INCREMENTATION IS INTERCHANGES WITH THE INCREMENTATION OF THE DOWNLOADED!!!!!!!!!!!!!!!!!!! 
 
     await new Promise(async (resolve, reject) => {
-        await increment_progress_val('queued');
+        // await increment_progress_val('queued');
 
 
         res.body.pipe(fileStream);
@@ -23,12 +23,12 @@ export default async function downloadFile(url, path_to_file) {
         if(err) { console.log(`\n${err} \nONE FILE FAILED!`); }
         else{
 
-            await increment_progress_val('downloaded');
+            // await increment_progress_val('downloaded');
 
             console.log(`\n${path_to_file}`);
             console.log('FILE DOWNLOADED');
-            const progress = await get_progress_json();
-            console.log(`${progress.downloaded} of ${progress.queued} files downloaded. (only close this program, when these values don't change for a long time)`);
+            // const progress = await get_progress_json();
+            // console.log(`${progress.downloaded} of ${progress.queued} files downloaded. (only close this program, when these values don't change for a long time)`);
 
         }
 
