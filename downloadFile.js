@@ -2,10 +2,16 @@ import fetch from 'node-fetch';
 import fs from 'fs';
 
 import shelljs from 'shelljs';
+import os from 'os';
+const downloads_path = `${os.homedir()}/Downloads`;
 
-export default async function downloadFile(url, path_to_file, dir_path) {
+export default async function downloadFile(url, file_name, dir_path) {
 
-    shelljs.mkdir('-p', dir_path); // Create the dir where the file to be downloaded is to be stored.
+    const absolute_dir_path = `${downloads_path}/${dir_path.replace(/[&#,+()$~%.'":*?<>]/g, '')}`;
+    file_name = file_name.replace(/[&\/\\#,+()$~%'":*?<>]/g, ''); // Filtering out everything except '.', for file extensions.
+    const path_to_file = `${absolute_dir_path}/${file_name}`;
+
+    shelljs.mkdir('-p', absolute_dir_path); // Create the dir where the file to be downloaded is to be stored.
 
     const res = await fetch(url);
     const fileStream = fs.createWriteStream(path_to_file);
@@ -19,7 +25,6 @@ export default async function downloadFile(url, path_to_file, dir_path) {
 
         res.body.on("error", reject);
         fileStream.on("finish", resolve);
-
 
     }).then(async (err) => {
         fileStream.close(); 
