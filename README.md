@@ -1,21 +1,50 @@
 # BBResque
+[//]: # (Simple overview of use/purpose.)
 
-## **npm i bbresque**
+Webscraper for downloading all of the contents(course-material) of a student's courses on Blackboard LMS.
 
-## Announcements -
- - For directly contacting me for support, add me on Discord, ClumsyCløver#3385 or send me an email at cloversoftinc@outlook.com (I will be happy to help!) I work in the IST timezone (fyi)
- - Version 1.5.3 released - Fixed errors that were causing the program to stop because of special characters in folders names, increased timeout of loading pages to 100000ms.
+The University of Newcastle (Australia) is moving from BlackBoard LMS to Canvas LMS from Semester 1, 2022. 
 
-## About -
+Students have been advised to download their course material, etc. which would be very time consuming to do manually. You would have to navigate through all your folders, click on every single file (maybe twice) to download, then arrange of them into folders, etc.
 
-### With the recent announcement of the university switching over to the Canvas LMS from Sem 1 2022, all university students were advised to download their course material etc. from the BlackBoard LMS.
+Luckily, BBResque does all this for you in just a few clicks! Follow the steps below to see how.
 
-### Downloading all your files from Blackboard could become tiring as you would go about navigating through all your folders, clicking on every single file (maybe twice) to in order to download it. Moreover, you would then also have to arrange all those files into folders on your PC or the cloud.
-### BBResque does all this for you in just a few clicks. Follow the steps below to see how.
+## Getting Started
 
-## **Steps to install -**
-#### 1) Download and install the latest LTS version of NodeJS (if you don't already have it), for your respective OS from here - https://nodejs.org/en/download/ (download v14(or higher) of nodejs)
-#### 2) Open CMD(Windows) or Terminal(MacOS/Linux).
-#### 3) Type the command - **"npm i bbresque -g"**, this will install BBResque on your PC.
-#### 4) After the installation finishes, type **bbresque** into the Terminal/CMD window, this will run BBResque, now every time you want to run BBResque; just open up CMD/Terminal and type in **bbresque**.
-#### 5) Further steps will be displayed in the terminal window.
+### Dependencies
+[//]: # (Describe any prerequisites, libraries, OS version, etc., needed before installing program e.g. Windows 10)
+
+* [Node.js v14(LTS) or higher](https://nodejs.org/en/download/ "Node.js downloads")
+* Google Chrome
+
+### Installing
+[//]: # (How/where to download your program, any modifications needed to be made to files/folders)
+
+1) Download and install the [latest NodeJS (LTS)](https://nodejs.org/en/download/ "Node.js downloads") for your respective OS.
+2) Open CMD(Windows) or Terminal(MacOS/Linux).
+3) Type or copy the following command into Terminal/CMD window to install BBResque.
+```
+npm i bbresque -g
+```
+
+### Executing program
+[//]: # (How to run the program, step-by-step bullets)
+
+1) After the installation finishes, type ```bbresque``` into the Terminal/CMD window, this will run BBResque, now every time you want to run BBResque; just open up CMD/Terminal and type in **bbresque**.
+2) Further steps will be displayed in the terminal window.
+
+## Help
+
+- I'm more than happy to help! I do work in the IST (Indian Standard Timezone) so I may not respond immediately. 
+    - Contacting me for support, via Discord ```ClumsyCløver#3385``` or email ```cloversoftinc@outlook.com ```
+
+## Version History
+* 1.5.2 
+    * Folder arrangement improved, major bugs fixes that were the causing the program to not navigate the course material page properly.
+    
+* 1.5.3 
+    * Fixed errors that were causing the program to stop because of special characters in folders names, increased timeout of loading pages to 100000ms.
+
+## License
+
+This project is licensed under the [MIT License](/LICENSE)
