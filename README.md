@@ -9,6 +9,22 @@ Students have been advised to download their course material, etc. which would b
 
 Luckily, BBResque does all this for you in just a few clicks! Follow the steps below to see how.
 
+### Command for updating, checking BBResque's version on your PC, running these every time before you run the program is recommended as we are consistently updating BBResque
+[//]: # (Commands for updating and checking versions of the program)
+
+1) Commands for checking the latest available version:
+```
+npm info bbresque version
+```
+2) Command for checking the version you currently have installed:
+```
+npm ls -g --depth=0
+```
+3) Command for updating BBResque to the latest available version:
+```
+npm update -g
+```
+
 ## Getting Started
 
 ### Dependencies
@@ -32,6 +48,22 @@ npm i bbresque -g
 
 1) After the installation finishes, type ```bbresque``` into the Terminal/CMD window, this will run BBResque, now every time you want to run BBResque; just open up CMD/Terminal and type in **bbresque**.
 2) Further steps will be displayed in the terminal window.
+
+### Using the program, and its CLI
+[//]: # (Using the program's CLI, and understanding it)
+
+1) This program will first open up a programatically controlled instance of Chrome, where you'll be redirected to the sign-in(AUTH) page(OKTA) for logging in to BlackBoard.
+2) After your BlackBoard homepage is opened up, navigate to the course materials page of a course, or any page where you files are located.
+3) Keeping the page open, switch over to the terminal/command line page, it will have a promt asking you if the page you want to download files from is ready, enter any charac. to continue.
+4) After this watch the progress of the program on the terminal window and the file explorer window, addresses of files which are being downloaded will appear.
+5) All of your downloaded files will be avaliable in your regular downloads folder.
+6) Once the progress of the terminal window stops printing for 4-5 mins straight, press 'Ctrl+C', and check if all the files have been downloaded and are correctly oraganized in folders.
+7) Quit the program and restart it if you want to download from another page.
+
+* Things to note: 
+    * Only use the tab in which the sign-on page is opened, do not open up a new tab by yourself.
+    * If the terminal window stops printing or stops updating for a bit over 5 mins, consider that all your files have been downloaded and exit the program. To download files from another page, restart the program; follow the above steps again.
+    * All your downloaded files will be available in your primary Downloads folder.
 
 ## Help
 

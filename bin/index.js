@@ -23,14 +23,13 @@ const downloads_path = `${os.homedir()}/Downloads`;
     console.log('\nThis is program designed to help UON students instantly download their course material from BlackBoard,\nit is to help all my fellow uni friends in this period of switching over to Canvas.');
     console.log('\nSteps and instructions to use this program -');
     console.log("1) This program will first open up a programatically controlled instance of Chrome, where you'll be redirected to the sign-in(AUTH) page(OKTA) for logging in to BlackBoard.");
-    console.log("2) After your BlackBoard homepage is opened up, navigate to any course and then click on your course materials link, or any page where you files are located.");
-    console.log("3) Just click on the ink mentioned above, and the first page that appears will be the one that you want to keep open.")
+    console.log("2) After your BlackBoard homepage is opened up, navigate to the course materials page of a course, or any page where you files are located.");
     console.log("NOTE: Only use the tab in which the sign-on page is opened, do not open up a new tab by yourself.");
-    console.log("4) Keeping the page open, switch over to the terminal/command line page, it will have a promt asking you if the page you want to download files from is ready, enter any charac. to continue.");
-    console.log("5) After this watch the progress of the program on the terminal window and the file explorer window, addresses of files which are being downloaded will appear.");
-    console.log("6) All of your downloaded files will be avaliable in your regular downloads folder.")
-    console.log("7) Once the progress of the terminal window stops printing for 4-5 mins straight, press 'Ctrl+C', and check if all the files have been downloaded and are correctly oraganized in folders.");
-    console.log("8) Quit the program and restart it if you want to download from another page.")
+    console.log("3) Keeping the page open, switch over to the terminal/command line page, it will have a promt asking you if the page you want to download files from is ready, enter any charac. to continue.");
+    console.log("4) After this watch the progress of the program on the terminal window and the file explorer window, addresses of files which are being downloaded will appear.");
+    console.log("5) All of your downloaded files will be avaliable in your regular downloads folder.")
+    console.log("6) Once the progress of the terminal window stops printing for 4-5 mins straight, press 'Ctrl+C', and check if all the files have been downloaded and are correctly oraganized in folders.");
+    console.log("7) Quit the program and restart it if you want to download from another page.")
 
     console.log("\nNOTE! - The Chrome instance you are using is controlled programatically, and the data from web pages is being scraped to help you download all your files, NO DATA whatsoever is being collected in this process.");
     
