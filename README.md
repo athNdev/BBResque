@@ -9,7 +9,7 @@ Students have been advised to download their course material, etc. which would b
 
 Luckily, BBResque does all this for you in just a few clicks! Follow the steps below to see how.
 
-### Command for updating, checking BBResque's version on your PC, running these every time before you run the program is recommended as we are consistently updating BBResque
+### Commands for updating, checking BBResque's version on your PC, running these every time before you run the program is recommended as we are consistently updating BBResque
 [//]: # (Commands for updating and checking versions of the program)
 
 1) Commands for checking the latest available version:
