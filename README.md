@@ -77,6 +77,10 @@ npm i bbresque -g
 * 1.5.3 
     * Fixed errors that were causing the program to stop because of special characters in folders names, increased timeout of loading pages to 100000ms.
 
+* 1.5.4
+    * Updated README.md
+    * Updated in-program instructions.
+
 ## License
 
 This project is licensed under the [MIT License](/LICENSE)
