@@ -4,7 +4,7 @@
 
 ## Announcements -
  - For directly contacting me for support, add me on Discord, ClumsyCløver#3385 or send me an email at cloversoftinc@outlook.com (I will be happy to help!) I work in the IST timezone (fyi)
- - Version 1.5.2 released - Folder arrangement improved, major bugs fixes that were the causing the program to not navigate the course material page properly.
+ - Version 1.5.3 released - Fixed errors that were causing the program to stop because of special characters in folders names, increased timeout of loading pages to 100000ms.
 
 ## About -
 

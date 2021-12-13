@@ -11,9 +11,6 @@ export default async function crawl_folder_pages($, browser, address){
     const attachments_page = ($('.attachments li a').length != 0);
     const folder_page = $('h3 a').not('.submenuLink').not('.comboLink').length != 0;
 
-    console.log("ATTACHMENTS PAGE BOOL "+attachments_page+" "+$('.liItem h3').text());
-    console.log("FOLDER PAGE BOOL "+folder_page+"\n");
-
     // Check is the page is a attachmnets page
     if(attachments_page){ crawl_attachments($, browser, address); }
 
@@ -31,15 +28,17 @@ async function crawl_folders($, browser, address){
 
         if(!$(elem).attr('href').includes('#')) {
 
-            const folder_name = $('span', elem).text().replace(/[&\/\\#,+()$~%.'":*?<>]/g, '');
+            // const folder_name = $('span', elem).text().replace(/[&\/\\#,+()$~%.'":*?<>]/g, '');
+            const folder_name = $('span', elem).text();
+            const course_name = $('#crumb_1 .courseName').text();
             var new_address = "";
-    
+        
             if(address){ // If some address was passed in the args.
                 new_address = address + `${folder_name}/`;
                 // fs.mkdir(`${new_address}/`, () => {});
             }
             else{
-                new_address = `${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/` + `${folder_name}/`;
+                new_address = `DOWNLOADED_FILES/${course_name}/` + `${page_title_text}/` + `${folder_name}/`;
 
                 // fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/`, { recursive: true }, (err) => { }); // Create course folder
                 // fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/${$('#crumb_1 .courseName').text()}/` + `${page_title_text}/`, { recursive: true }, (err) => { }); // Create page folder
