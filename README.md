@@ -40,14 +40,6 @@ npm i bbresque -g
 
 - I'm more than happy to help! I do work in the IST (Indian Standard Timezone) so I may not respond immediately. 
     - Contacting me for support, via Discord ```ClumsyCløver#3385``` or email ```cloversoftinc@outlook.com ```
-     
-
-## Authors (remove if not applicable)
-
-Contributors names and contact info
-
-ex. Dominique Pizzie  
-ex. [@DomPizzie](https://twitter.com/dompizzie)
 
 ## Version History
 * 1.5.2 
