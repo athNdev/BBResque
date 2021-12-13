@@ -1,10 +1,7 @@
 # BBResque
 [//]: # (Simple overview of use/purpose.)
 
-Webscraper for downloading all of the contents of a student's courses on Blackboard LMS
-
-## Description
-[//]: # (An in-depth paragraph about your project and overview of use.)
+Webscraper for downloading all of the contents(course-material) of a student's courses on Blackboard LMS.
 
 The University of Newcastle (Australia) is moving from BlackBoard LMS to Canvas LMS from Semester 1, 2022. 
 
@@ -18,7 +15,7 @@ Luckily, BBResque does all this for you in just a few clicks! Follow the steps b
 [//]: # (Describe any prerequisites, libraries, OS version, etc., needed before installing program e.g. Windows 10)
 
 * [Node.js v14(LTS) or higher](https://nodejs.org/en/download/ "Node.js downloads")
-* ??What OS/browser/etc. has it been tested on??
+* Google Chrome
 
 ### Installing
 [//]: # (How/where to download your program, any modifications needed to be made to files/folders)
@@ -44,6 +41,9 @@ npm i bbresque -g
 ## Version History
 * 1.5.2 
     * Folder arrangement improved, major bugs fixes that were the causing the program to not navigate the course material page properly.
+    
+* 1.5.3 
+    * Fixed errors that were causing the program to stop because of special characters in folders names, increased timeout of loading pages to 100000ms.
 
 ## License
 

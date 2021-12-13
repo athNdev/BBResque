@@ -9,6 +9,9 @@ import fs from "fs";
 import os from 'os';
 const downloads_path = `${os.homedir()}/Downloads`;
 
+/// REMOVE THE FOLLOWING
+// import shelljs from "shelljs";
+// import path from "path";
 
 (async () => {
     console.log('======================== BBResque =========================');
@@ -26,7 +29,8 @@ const downloads_path = `${os.homedir()}/Downloads`;
     console.log("4) Keeping the page open, switch over to the terminal/command line page, it will have a promt asking you if the page you want to download files from is ready, enter any charac. to continue.");
     console.log("5) After this watch the progress of the program on the terminal window and the file explorer window, addresses of files which are being downloaded will appear.");
     console.log("6) All of your downloaded files will be avaliable in your regular downloads folder.")
-    console.log("7) Once the progress of the terminal window stops for 4-5 mins straight, press 'Ctrl+C', and check if all the files have been downloaded and are correctly oraganized in folders.");
+    console.log("7) Once the progress of the terminal window stops printing for 4-5 mins straight, press 'Ctrl+C', and check if all the files have been downloaded and are correctly oraganized in folders.");
+    console.log("8) Quit the program and restart it if you want to download from another page.")
 
     console.log("\nNOTE! - The Chrome instance you are using is controlled programatically, and the data from web pages is being scraped to help you download all your files, NO DATA whatsoever is being collected in this process.");
     
@@ -43,7 +47,23 @@ const downloads_path = `${os.homedir()}/Downloads`;
     });
 
     fs.mkdir(`${downloads_path}/DOWNLOADED_FILES/`, { recursive: true }, (err) => { });
+
+    // console.log("Hello: World 1".replace(/[&\/\\#,+()$~%.'":*?<>]/g, ''));
+    // const invertSlashes = str => {
+    //     let res = '';
+    //     for(let i = 0; i < str.length; i++){
+    //        if(str[i] == '//'){
+    //           res += '\\';
+    //           continue;
+    //        };
+    //        // res += '\\';
+    //        res += str[i];
+    //     };
+    //     return res;
+    // };
     
+    // const address = invertSlashes(path.normalize(`${downloads_path}\DOWNLOADED_FILES\BIO1002 ORAGANISMS TO ECOSYSTEM (S2 2021 CALLLAGHAN)\Course Materials/Module 1 Animal Biology Weeks 1-4\Week 13: Animal Module Revision Lecture`));
+    // shelljs.mkdir(address);
     
     console.log('\nTo proceed with all the questions below, enter any character and press enter.');
     readConsole.question('\nReady to open chrome? ', async () => { 
