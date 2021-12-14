@@ -2,7 +2,7 @@ import fs from 'fs';
 import downloadFile from './downloadFile.js';
 
 import os from 'os';
-const downloads_path = `${os.homedir()}/Downloads`;
+// const downloads_path = `${os.homedir()}/Downloads`;
 
 export default function crawl_attachments($, browser, address) {
     // if(address) {
@@ -35,7 +35,7 @@ export default function crawl_attachments($, browser, address) {
                                         // NEW ADDRESS - .liItem .item h3 span span
                                         // OLD ADDRESS - .liItem .item h3 span:not(.hideme)
                                         // fs.mkdir(`${address}/${$(".item h3 span:nth-child(2)", liitem_elem).text()}`, { recursive: true }, (err) => { });
-                                        path = `${address}/${$(".item h3 span:nth-child(2)", liitem_elem).text()}`;
+                                        path = `${address}${$(".item h3 span:nth-child(2)", liitem_elem).text()}`;
                                     }
                                     else{ path = default_path; }
 

@@ -3,13 +3,18 @@ import fs from 'fs';
 
 import shelljs from 'shelljs';
 import os from 'os';
-const downloads_path = `${os.homedir()}/Downloads`;
+import url_module from 'url';
+
+// const downloads_path = `${os.homedir()}/Downloads`;
+const downloads_path = url_module.fileURLToPath(`file://${os.homedir()}/Downloads`); // Correcting the encoding of the path.
 
 export default async function downloadFile(url, file_name, dir_path) {
 
-    const absolute_dir_path = `${downloads_path}/${dir_path.replace(/[&#,+()$~%.'":*?<>]/g, '')}`;
+    var absolute_dir_path = `${downloads_path}/${dir_path.replace(/[&#,+()$~%.'":*?<>]/g, '')}`;
+    absolute_dir_path = url_module.fileURLToPath(`file://${absolute_dir_path}`); // Correcting the encoding of the path.
     file_name = file_name.replace(/[&\/\\#,+()$~%'":*?<>]/g, ''); // Filtering out everything except '.', for file extensions.
-    const path_to_file = `${absolute_dir_path}/${file_name}`;
+    var path_to_file = `${absolute_dir_path}/${file_name}`;
+    path_to_file = url_module.fileURLToPath(`file://${path_to_file}`);
 
     shelljs.mkdir('-p', absolute_dir_path); // Create the dir where the file to be downloaded is to be stored.
 

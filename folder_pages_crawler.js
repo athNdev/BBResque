@@ -3,7 +3,7 @@ import crawl_attachments from './attachments_pages_crawler.js';
 import fs from 'fs';
 
 import os from 'os';
-const downloads_path = `${os.homedir()}/Downloads`;
+// const downloads_path = `${os.homedir()}/Downloads`;
 
 export default async function crawl_folder_pages($, browser, address){
     // const attachments_page = ($('.attachments li a').length != 0) || ($('.liItem h3').text().includes('If this item does not open automatically you can'));

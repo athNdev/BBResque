@@ -81,6 +81,9 @@ npm i bbresque -g
     * Updated README.md
     * Updated in-program instructions.
 
+* 1.5.5
+    * Fixed a bug which was causing the program to crash due to incorrectly encoded file/folder paths.
+
 ## License
 
 This project is licensed under the [MIT License](/LICENSE)
